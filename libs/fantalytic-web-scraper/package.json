@@ -1,0 +1,31 @@
+{
+  "name": "fantalytic-web-scraper",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "fantalytic": "./bin/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "link": "tsc && npm link fantalytic-web-scraper",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Paul Mojica",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "cheerio": "^1.0.0-rc.10",
+    "dotenv": "^8.2.0",
+    "mongodb": "^3.6.3",
+    "node-fetch": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/minimist": "^1.2.0",
+    "@types/mongodb": "^3.6.3",
+    "@types/node": "^14.11.2",
+    "@types/node-fetch": "^2.5.7",
+    "minimist": "^1.2.5"
+  }
+}
