@@ -9,7 +9,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/fantalyic-admin-tool",
             "index": "apps/fantalyic-admin-tool/src/index.html",
@@ -21,7 +23,9 @@
               "apps/fantalyic-admin-tool/src/favicon.ico",
               "apps/fantalyic-admin-tool/src/assets"
             ],
-            "styles": ["apps/fantalyic-admin-tool/src/styles.scss"],
+            "styles": [
+              "apps/fantalyic-admin-tool/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -86,7 +90,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/fantalyic-admin-tool"],
+          "outputs": [
+            "coverage/apps/fantalyic-admin-tool"
+          ],
           "options": {
             "jestConfig": "apps/fantalyic-admin-tool/jest.config.js",
             "passWithNoTests": true
@@ -115,7 +121,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/fantalyic-admin-tool-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/fantalyic-admin-tool-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
@@ -128,7 +136,9 @@
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
-          "outputs": ["{options.outputPath}"],
+          "outputs": [
+            "{options.outputPath}"
+          ],
           "options": {
             "outputPath": "dist/apps/fantalytic-admin-tool",
             "index": "apps/fantalytic-admin-tool/src/index.html",
@@ -140,7 +150,9 @@
               "apps/fantalytic-admin-tool/src/favicon.ico",
               "apps/fantalytic-admin-tool/src/assets"
             ],
-            "styles": ["apps/fantalytic-admin-tool/src/styles.scss"],
+            "styles": [
+              "apps/fantalytic-admin-tool/src/styles.scss"
+            ],
             "scripts": []
           },
           "configurations": {
@@ -205,7 +217,9 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/fantalytic-admin-tool"],
+          "outputs": [
+            "coverage/apps/fantalytic-admin-tool"
+          ],
           "options": {
             "jestConfig": "apps/fantalytic-admin-tool/jest.config.js",
             "passWithNoTests": true
@@ -234,7 +248,9 @@
         "lint": {
           "builder": "@nrwl/linter:eslint",
           "options": {
-            "lintFilePatterns": ["apps/fantalytic-admin-tool-e2e/**/*.{js,ts}"]
+            "lintFilePatterns": [
+              "apps/fantalytic-admin-tool-e2e/**/*.{js,ts}"
+            ]
           }
         }
       }
