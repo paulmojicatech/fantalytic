@@ -1,5 +1,5 @@
 module.exports = {
-  displayName: 'fantalyic-admin-tool',
+  displayName: 'fantalytic-admin-tool',
   preset: '../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -8,7 +8,7 @@ module.exports = {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../coverage/apps/fantalyic-admin-tool',
+  coverageDirectory: '../../coverage/apps/fantalytic-admin-tool',
   transform: {
     '^.+\\.(ts|js|html)$': 'jest-preset-angular',
   },
