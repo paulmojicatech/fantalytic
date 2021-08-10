@@ -40,6 +40,9 @@
     "fantalytic-admin-tool-e2e": {
       "tags": [],
       "implicitDependencies": ["fantalytic-admin-tool"]
+    },
+    "shared-toolbar-sidenav": {
+      "tags": []
     }
   }
 }
