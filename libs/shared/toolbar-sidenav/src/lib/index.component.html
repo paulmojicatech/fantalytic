@@ -1,1 +1,14 @@
-<div *ngFor="let navItem of navItems">{{navItem}}</div>
+<mat-drawer-container class="component-container">
+    <mat-toolbar color="primary">
+        <button mat-icon-button (click)="sideNav.toggle()">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <span>{{title}}</span>
+    </mat-toolbar>
+    <mat-sidenav #sideNav class="sidenav-container">
+        <div class="sidenav-item" *ngFor="let navItem of navItems">
+            <span>{{navItem}}</span>
+        </div>
+    </mat-sidenav>
+    <ng-content select=".main-content"></ng-content>
+</mat-drawer-container>
