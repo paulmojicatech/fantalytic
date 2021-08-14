@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
 import { MatDrawerContainer } from '@angular/material/sidenav';
 
 @Component({
@@ -12,9 +12,11 @@ export class PmtToolbarSidenavComponent {
     navItems: Array<string> = [];
     @Input()
     title = '';
-
     @ViewChild('drawerContainer')
     drawerContainer?: MatDrawerContainer;
+
+    @Output()
+    itemClicked = new EventEmitter<string>();
 
     isOpen = false;
 

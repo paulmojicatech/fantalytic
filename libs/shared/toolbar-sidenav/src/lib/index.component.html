@@ -6,7 +6,7 @@
         <span>{{title}}</span>
     </mat-toolbar>
     <mat-sidenav #sideNav class="sidenav-container">
-        <div class="sidenav-item" *ngFor="let navItem of navItems">
+        <div class="sidenav-item" *ngFor="let navItem of navItems" (click) = "itemClicked.emit(navItem)">
             <span>{{navItem}}</span>
         </div>
     </mat-sidenav>

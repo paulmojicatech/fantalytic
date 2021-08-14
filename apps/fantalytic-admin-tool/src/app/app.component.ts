@@ -12,10 +12,10 @@ import { AppViewmodelService } from './services/app-viewmodel.service';
 export class AppComponent implements OnInit {
   viewModel$!: Observable<AppComponentViewModel>;
 
-  constructor(private _viewModelSvc: AppViewmodelService){}
+  constructor(public viewModelSvc: AppViewmodelService){}
 
   ngOnInit(): void {
-    this.viewModel$ = this._viewModelSvc.getViewModel();
+    this.viewModel$ = this.viewModelSvc.getViewModel();
   }
 
 }

@@ -18,4 +18,8 @@ export class AppViewmodelService {
     );
     return merge(routes$, this.viewModel$);
   }
+
+  handleSidenavClick(route: string): void {
+    console.log(`${route}`);
+  }
 }

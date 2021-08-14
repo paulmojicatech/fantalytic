@@ -1,3 +1,3 @@
 <div *ngIf="viewModel$ | async as viewModel">
-    <pmt-toolbar-sidenav title="Fantalytic Admin Tool" [navItems]="viewModel.routes"></pmt-toolbar-sidenav>
+    <pmt-toolbar-sidenav (itemClicked)="viewModelSvc.handleSidenavClick($event)" title="Fantalytic Admin Tool" [navItems]="viewModel.routes"></pmt-toolbar-sidenav>
 </div>
