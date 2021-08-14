@@ -27,13 +27,6 @@
     ]
   },
   "projects": {
-    "fantalyic-admin-tool": {
-      "tags": []
-    },
-    "fantalyic-admin-tool-e2e": {
-      "tags": [],
-      "implicitDependencies": ["fantalyic-admin-tool"]
-    },
     "fantalytic-admin-tool": {
       "tags": []
     },

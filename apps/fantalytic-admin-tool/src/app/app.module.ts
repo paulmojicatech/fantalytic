@@ -1,3 +1,4 @@
+/* eslint-disable @nrwl/nx/enforce-module-boundaries */
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
