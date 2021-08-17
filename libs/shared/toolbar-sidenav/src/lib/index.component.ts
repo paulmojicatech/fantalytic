@@ -1,5 +1,6 @@
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output, ViewChild } from '@angular/core';
-import { MatDrawerContainer } from '@angular/material/sidenav';
+import { MatDrawerContainer, MatDrawerMode } from '@angular/material/sidenav';
+import { MatDrawerState } from './models/sidenav.interface';
 
 @Component({
     selector: 'pmt-toolbar-sidenav',
@@ -9,9 +10,12 @@ import { MatDrawerContainer } from '@angular/material/sidenav';
 })
 export class PmtToolbarSidenavComponent {
     @Input()
-    navItems: Array<string> = [];
+    navItems!: Array<string>;
     @Input()
-    title = '';
+    title!: string;
+    @Input()
+    drawerState: MatDrawerState = MatDrawerState.CLOSED;
+
     @ViewChild('drawerContainer')
     drawerContainer?: MatDrawerContainer;
 

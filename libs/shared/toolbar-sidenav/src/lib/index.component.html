@@ -1,14 +1,14 @@
-<mat-drawer-container class="component-container">
+<mat-drawer-container autosize class="component-container">
     <mat-toolbar color="primary">
         <button mat-icon-button (click)="sideNav.toggle()">
             <mat-icon>menu</mat-icon>
         </button>
         <span>{{title}}</span>
     </mat-toolbar>
-    <mat-sidenav #sideNav class="sidenav-container">
+    <mat-drawer [opened]="drawerState === 'open'" #sideNav class="sidenav-container">
         <div class="sidenav-item" *ngFor="let navItem of navItems" (click) = "itemClicked.emit(navItem)">
             <span>{{navItem}}</span>
         </div>
-    </mat-sidenav>
+    </mat-drawer>
     <ng-content select=".main-content"></ng-content>
 </mat-drawer-container>

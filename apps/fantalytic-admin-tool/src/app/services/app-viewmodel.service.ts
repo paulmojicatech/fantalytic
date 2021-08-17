@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { merge, Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { AppComponentViewModel, AppRoutes } from '../models/app.component.interface';
@@ -10,6 +11,8 @@ export class AppViewmodelService {
 
   viewModel$ = this._appViewModelSub$.asObservable();
 
+  constructor(private _router: Router){}
+
   getViewModel(): Observable<AppComponentViewModel> {
     const route = new Map<string, AppRoutes>();
     route.set('Analyze File', AppRoutes.ANALYZE_FILE);
@@ -20,6 +23,6 @@ export class AppViewmodelService {
   }
 
   handleSidenavClick(route: string): void {
-    console.log(`${route}`);
+    this._router.navigate([route]);
   }
 }
