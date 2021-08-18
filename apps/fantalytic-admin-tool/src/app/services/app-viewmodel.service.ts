@@ -23,6 +23,12 @@ export class AppViewmodelService {
   }
 
   handleSidenavClick(route: string): void {
-    this._router.navigate([route]);
+    switch (route) {
+      case 'Analyze File':
+        this._router.navigate([AppRoutes.ANALYZE_FILE]);
+        break;
+      default:
+        break;
+    }
   }
 }
