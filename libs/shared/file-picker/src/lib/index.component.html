@@ -1,0 +1,11 @@
+<div class="file-picker-container">
+    <span>{{label}}</span>
+    <div class="browse-container">
+        <button (click)="browseForFile()" mat-button color="accent">Browse</button>
+        <input #fileInput type="file" hidden />
+    </div>
+    <div class="icon-container">
+        <mat-icon>cloud</mat-icon>
+    </div>
+
+</div>

@@ -15,6 +15,9 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@fantalytic/shared/file-picker": [
+        "libs/shared/file-picker/src/index.ts"
+      ],
       "@fantalytic/shared/toolbar-sidenav": [
         "libs/shared/toolbar-sidenav/src/index.ts"
       ]
