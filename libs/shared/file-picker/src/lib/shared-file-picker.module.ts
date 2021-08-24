@@ -5,10 +5,11 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 
 import { PmtFilePickerComponent } from './index.component';
+import { PmtFileDropDirective } from './directives/file-drop.directive';
 
 @NgModule({
   imports: [CommonModule, MatIconModule, MatButtonModule],
-  declarations: [PmtFilePickerComponent],
+  declarations: [PmtFilePickerComponent, PmtFileDropDirective],
   exports: [PmtFilePickerComponent]
 })
 export class SharedFilePickerModule {}

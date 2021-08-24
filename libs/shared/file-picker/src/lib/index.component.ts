@@ -16,4 +16,8 @@ export class PmtFilePickerComponent {
     browseForFile(): void {
         this.fileInput.nativeElement.click();
     }
+
+    handleFileDropped(event: File): void {
+        console.log('event', event.name);
+    }
 }

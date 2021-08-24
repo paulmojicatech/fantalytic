@@ -1,8 +1,8 @@
-<div class="file-picker-container">
+<div class="file-picker-container" pmtFileDrop (onFileDropped)="handleFileDropped($event)">
+    <input #fileInput type="file" />
     <span>{{label}}</span>
     <div class="browse-container">
         <button (click)="browseForFile()" mat-button color="accent">Browse</button>
-        <input #fileInput type="file" hidden />
     </div>
     <div class="icon-container">
         <mat-icon>cloud</mat-icon>
