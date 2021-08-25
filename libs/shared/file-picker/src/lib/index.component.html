@@ -7,9 +7,12 @@
     <div class="icon-container">
         <mat-icon>cloud</mat-icon>
     </div>
-    <div class="files-container">
-        <span *ngFor="let file of files">
-            {{file.name}}
+</div>
+<div class="files-container">
+    <span class="file-container" *ngFor="let file of files">
+        <span>{{file.name}}</span>
+        <span>
+            <mat-icon>remove_circle_outline</mat-icon>
         </span>
-    </div>
+    </span>
 </div>

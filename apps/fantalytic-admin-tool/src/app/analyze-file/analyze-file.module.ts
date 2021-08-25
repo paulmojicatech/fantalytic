@@ -1,5 +1,6 @@
 import { CommonModule } from "@angular/common";
 import { NgModule } from "@angular/core";
+import { MatButtonModule } from "@angular/material/button";
 import { Route, RouterModule } from "@angular/router";
 
 import { SharedFilePickerModule } from '../../../../../libs/shared/file-picker/src/index';
@@ -16,7 +17,12 @@ const routes: Route[] = [
 ]
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes), SharedFilePickerModule],
+    imports: [
+        CommonModule, 
+        RouterModule.forChild(routes), 
+        SharedFilePickerModule,
+        MatButtonModule
+    ],
     declarations: [AnalyzeFileComponent]
 })
 

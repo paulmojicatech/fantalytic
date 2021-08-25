@@ -1,3 +1,8 @@
 <div class="analyze-file-container">
-    <pmt-file-picker label="Select or drag a file to analyze."></pmt-file-picker>
+    <pmt-file-picker #filePicker label="Select or drag a file to analyze."></pmt-file-picker>
+    <footer class="action-container">
+        <button mat-raised-button color="primary" (click)="analyzeFiles()">
+            Analyze Files
+        </button>
+    </footer>
 </div>
