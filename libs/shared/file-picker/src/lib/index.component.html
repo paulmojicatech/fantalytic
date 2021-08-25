@@ -1,5 +1,5 @@
-<div class="file-picker-container" pmtFileDrop (onFileDropped)="handleFileDropped($event)">
-    <input #fileInput type="file" />
+<div class="file-picker-container" pmtFileDrop>
+    <input multiple #fileInput type="file" (change)="handleFileInputChange($event)" />
     <span>{{label}}</span>
     <div class="browse-container">
         <button (click)="browseForFile()" mat-button color="accent">Browse</button>
@@ -7,5 +7,9 @@
     <div class="icon-container">
         <mat-icon>cloud</mat-icon>
     </div>
-
+    <div class="files-container">
+        <span *ngFor="let file of files">
+            {{file.name}}
+        </span>
+    </div>
 </div>

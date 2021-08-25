@@ -1,4 +1,5 @@
-import { ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from "@angular/core";
+import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from "@angular/core";
+import { fromEvent } from "rxjs";
 
 @Component({
     selector: 'pmt-file-picker',
@@ -10,6 +11,8 @@ export class PmtFilePickerComponent {
     @Input()
     label!: string;
 
+    files: Array<File> = [];
+
     @ViewChild('fileInput')
     fileInput!: ElementRef<HTMLInputElement>;
 
@@ -17,7 +20,7 @@ export class PmtFilePickerComponent {
         this.fileInput.nativeElement.click();
     }
 
-    handleFileDropped(event: File): void {
-        console.log('event', event.name);
+    handleFileInputChange(event: any): void {
+        this.files = [...this.files, event.target.files[0]];
     }
 }
