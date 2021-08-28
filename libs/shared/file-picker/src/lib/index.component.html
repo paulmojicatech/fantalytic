@@ -12,7 +12,7 @@
     <span class="file-container" *ngFor="let file of files">
         <span>{{file?.name}}</span>
         <span>
-            <mat-icon>remove_circle_outline</mat-icon>
+            <mat-icon (click)="removeFile(file)">remove_circle_outline</mat-icon>
         </span>
     </span>
 </div>

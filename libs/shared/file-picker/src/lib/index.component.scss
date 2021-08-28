@@ -49,6 +49,9 @@
         .mat-icon {
             margin-top: .3rem;
             margin-left: 1rem;
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }

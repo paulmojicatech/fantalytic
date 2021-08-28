@@ -40,7 +40,14 @@ export class PmtFilePickerComponent {
         
     }
 
-    isSelectedFilePresent(fileName: string): boolean {
+    removeFile(fileToRemove: File): void {
+        const fileToRemoveIndex = this.files
+            .findIndex(file => file.name === fileToRemove.name);
+        this.files.splice(fileToRemoveIndex, 1);
+    }
+
+    private isSelectedFilePresent(fileName: string): boolean {
         return this.files.findIndex(file => file.name === fileName) > -1;
     }
+
 }
