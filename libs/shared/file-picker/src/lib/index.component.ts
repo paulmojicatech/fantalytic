@@ -21,6 +21,26 @@ export class PmtFilePickerComponent {
     }
 
     handleFileInputChange(event: any): void {
-        this.files = [...this.files, event.target.files[0]];
+        const currentFileLength = event?.target?.files?.length ?? null;
+        if (!!currentFileLength) {
+            const fileToAdd = event.target.files[currentFileLength - 1];
+            const doesExist = this.isSelectedFilePresent(fileToAdd.name);
+            if (!doesExist) {
+                this.files = [...this.files, fileToAdd];
+            }
+            
+        }
+    }
+
+    handleFileDropped(file: File): void {
+        const doesExist = this.isSelectedFilePresent(file.name);
+        if (!doesExist) {
+            this.files = [...this.files, file];
+        }
+        
+    }
+
+    isSelectedFilePresent(fileName: string): boolean {
+        return this.files.findIndex(file => file.name === fileName) > -1;
     }
 }

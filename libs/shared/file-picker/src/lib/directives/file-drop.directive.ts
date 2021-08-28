@@ -21,6 +21,8 @@ export class PmtFileDropDirective {
 
     @HostListener('drop', ['$event'])
     ondrop(event: any): void {
+        event.preventDefault();
+        event.stopPropagation();
         const files = event.dataTransfer.files;
         if (files.length > 0) {
             this.onFileDropped.emit(files[0]);

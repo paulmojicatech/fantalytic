@@ -1,4 +1,4 @@
-<div class="file-picker-container" pmtFileDrop>
+<div class="file-picker-container" pmtFileDrop (onFileDropped)="handleFileDropped($event)">
     <input multiple #fileInput type="file" (change)="handleFileInputChange($event)" />
     <span>{{label}}</span>
     <div class="browse-container">
@@ -10,7 +10,7 @@
 </div>
 <div class="files-container">
     <span class="file-container" *ngFor="let file of files">
-        <span>{{file.name}}</span>
+        <span>{{file?.name}}</span>
         <span>
             <mat-icon>remove_circle_outline</mat-icon>
         </span>
