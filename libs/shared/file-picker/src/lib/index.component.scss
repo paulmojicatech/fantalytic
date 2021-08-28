@@ -1,0 +1,57 @@
+.file-picker-container {
+    color: #c0c0c0c0;
+    font-size: 2.5rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 5px dotted;
+    border-radius: 10px;
+    padding: 3rem;
+    input {
+        opacity: 0;
+        position: relative;
+        width: 0;
+        height: 0;
+        top: 0;
+        left: 0;
+    }
+}
+
+.icon-container {
+    .mat-icon {
+        color: #c0c0c0;
+        font-size: 4rem;
+        width: 4rem;
+        height: 4rem;
+    }
+}
+
+.mat-accent {
+    font-size: 1.25rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #c0c0c0;
+}
+
+.files-container {
+    color: #696969;
+    font-size: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    .file-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .mat-icon {
+            margin-top: .3rem;
+            margin-left: 1rem;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}

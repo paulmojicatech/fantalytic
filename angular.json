@@ -120,6 +120,31 @@
         }
       }
     },
+    "shared-file-picker": {
+      "projectType": "library",
+      "root": "libs/shared/file-picker",
+      "sourceRoot": "libs/shared/file-picker/src",
+      "prefix": "pmt",
+      "architect": {
+        "test": {
+          "builder": "@nrwl/jest:jest",
+          "outputs": ["coverage/libs/shared/file-picker"],
+          "options": {
+            "jestConfig": "libs/shared/file-picker/jest.config.js",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "builder": "@nrwl/linter:eslint",
+          "options": {
+            "lintFilePatterns": [
+              "libs/shared/file-picker/src/**/*.ts",
+              "libs/shared/file-picker/src/**/*.html"
+            ]
+          }
+        }
+      }
+    },
     "shared-toolbar-sidenav": {
       "projectType": "library",
       "root": "libs/shared/toolbar-sidenav",
