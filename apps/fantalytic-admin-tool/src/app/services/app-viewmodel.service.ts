@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { merge, Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -11,7 +12,7 @@ export class AppViewmodelService {
 
   viewModel$ = this._appViewModelSub$.asObservable();
 
-  constructor(private _router: Router){}
+  constructor(private _router: Router, private _matSnackbar: MatSnackBar){}
 
   getViewModel(): Observable<AppComponentViewModel> {
     const route = new Map<string, AppRoutes>();
@@ -30,5 +31,9 @@ export class AppViewmodelService {
       default:
         break;
     }
+  }
+
+  displayErrorMessage(errorMessage: string): void {
+
   }
 }
