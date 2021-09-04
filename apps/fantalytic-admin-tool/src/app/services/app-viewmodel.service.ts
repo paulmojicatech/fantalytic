@@ -12,7 +12,7 @@ export class AppViewmodelService {
 
   viewModel$ = this._appViewModelSub$.asObservable();
 
-  constructor(private _router: Router, private _matSnackbar: MatSnackBar){}
+  constructor(private _router: Router){}
 
   getViewModel(): Observable<AppComponentViewModel> {
     const route = new Map<string, AppRoutes>();
@@ -33,7 +33,4 @@ export class AppViewmodelService {
     }
   }
 
-  displayErrorMessage(errorMessage: string): void {
-
-  }
 }
