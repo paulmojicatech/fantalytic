@@ -1,5 +1,7 @@
 import { Component, ViewChild } from "@angular/core";
 import { PmtFilePickerComponent } from "@fantalytic/shared/file-picker";
+import { AppUtilService } from "../services/app-util.service";
+import { ErrorMessageDispatcherService } from "../services/error-message-dispatcher.service";
 
 @Component({
     templateUrl: './analyze-file.component.html',
@@ -10,6 +12,8 @@ export class AnalyzeFileComponent{
     @ViewChild('filePicker')
     filePicker!: PmtFilePickerComponent;
 
+    constructor(private _errorMsgDispatcherSvc: ErrorMessageDispatcherService){}
+
     analyzeFiles(): void {
         // make sure files are .json
         const nonJsonFiles = this.filePicker.files.filter(file => {
@@ -18,7 +22,7 @@ export class AnalyzeFileComponent{
             return fileExt.toLowerCase() !== 'json';
         });
         if (!!nonJsonFiles?.length) {
-            alert('File type not allowed.  Only JSON files can be analyzed');
+            this._errorMsgDispatcherSvc.dispatchErrorMsg('File type not allowed.  Only JSON files can be analyzed');
         }
     }
 }

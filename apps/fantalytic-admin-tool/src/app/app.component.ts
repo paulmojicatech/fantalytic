@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AppComponentViewModel } from './models/app.component.interface';
 import { AppViewmodelService } from './services/app-viewmodel.service';
+import { ErrorMessageDispatcherService } from './services/error-message-dispatcher.service';
 
 @Component({
   selector: 'fantalytic-root',

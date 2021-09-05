@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { merge, Observable, of, Subject } from 'rxjs';
 import { map } from 'rxjs/operators';

@@ -44,6 +44,7 @@
     "@nrwl/angular": "12.6.5",
     "rxjs": "~6.6.0",
     "tslib": "^2.0.0",
+    "uuid": "^8.3.2",
     "zone.js": "~0.11.4"
   },
   "devDependencies": {
@@ -64,6 +65,7 @@
     "@nrwl/workspace": "12.6.5",
     "@types/jest": "26.0.24",
     "@types/node": "14.14.33",
+    "@types/uuid": "^8.3.1",
     "@typescript-eslint/eslint-plugin": "~4.28.3",
     "@typescript-eslint/parser": "~4.28.3",
     "cypress": "^7.3.0",
